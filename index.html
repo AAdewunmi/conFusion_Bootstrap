@@ -76,6 +76,101 @@
             </div>
         </div>
     </div>
+    
+    <div class="modal fade" id="ReserveTableModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"><b>Reserve a Table</b></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+                   <form>
+                    <div class="form-group row">
+                        <label for="guestnum" class="col-12 col-md-2 col-form-label">Number of Guests: </label>
+                        <div class="col-12 col-md-8">
+                            <div class="form-check-inline">
+                              <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optradio1"> 1
+                              </label>
+                            </div>
+                            <div class="form-check-inline">
+                              <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optradio2"> 2
+                              </label>
+                            </div>
+                            <div class="form-check-inline">
+                              <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optradio3"> 3
+                              </label>
+                            </div>
+                            <div class="form-check-inline">
+                              <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optradio4"> 4
+                              </label>
+                            </div>
+                            <div class="form-check-inline">
+                              <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optradio5"> 5
+                              </label>
+                            </div>
+                            <div class="form-check-inline">
+                              <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optradio6"> 6
+                              </label>
+                            </div>
+                        </div>
+                        <div class="col-0 col-md-2">
+                            <!-- To be used-->
+                        </div>
+                    </div>
+                           
+                    <div class="form-group row"> 
+                        <label for="telnum" class="col-12 col-md-2 col-form-label">Section: </label>
+                        
+                        <div class="col-12 col-md-6 mb-2">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                              <label class="btn btn-success active">
+                                <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+                              </label>
+                              <label class="btn btn-danger">
+                                <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                              </label>
+                            </div>
+                        </div>
+                    </div>
+                
+                   <div class="form-group row">
+                        
+                        <label for="telnum" class="col-12 col-md-2 col-form-label">Date and Time: </label>
+                        
+                        <div class="col-12 col-md-3 mb-2">
+                            <input type="text" class="form-control" id="datebox" name="datebox" placeholder="Date">
+                        </div>
+                        
+                        <div class="col-12 col-md-3 mb-2">
+                           <input type="text" class="form-control" id="timebox" name="timebox" placeholder="Time"> 
+                        </div>
+                       
+                       </div>
+                    
+                    <div class="form-group row">
+                        <div class="offset-md-2 col-md-10">
+                          <!-- To be used-->  
+                        </div>
+                    </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Reserve</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- header -->
     <header class="jumbotron">
         <div class="container">
@@ -87,8 +182,7 @@
                 </div>
                 <!-- div 2 -->
                     <div class="col-12 col-sm-3 align-self-center"><img src="img/logo.png" class="img-fluid"></div>
-                    <div class="col-12 col-sm-3 align-self-center"><a role="bottom" class="btn btn block nav-link btn-warning btn-sm" 
-                    data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or Call us at <br><strong>+852 12345678</strong>" href="#form" >Reserve Table</a></div>  
+                <div class="col-12 col-sm-3 align-self-center"><button type="bottom" class="btn btn block btn-warning btn-sm" data-toggle="modal" data-target="#ReserveTableModal" href="#form">Reserve Table</button></div>  
                 </div>
         </div>
     </header>
@@ -144,11 +238,21 @@
                         <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </a>
+                        <div class="btn-group" id="carouselButton">
+                            <button class="btn btn-danger btn-sm" id="carousel-pause"> 
+                                <span class="fa fa-pause"> </span>
+                            </button>
+                            <button class="btn btn-danger btn-sm" id="carousel-play"> 
+                                <span class="fa fa-play"></span>
+                            </button>
+                        </div>
                     </div>  
                </div>
            </div>
        </div>
-
+        
+        <!-- div 1 -->
+        
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Our Lipsmacking Culinary Creations</h3>
@@ -167,8 +271,9 @@
                 </div>
             </div>
         </div>
-
+        
         <!-- div 2 -->
+        
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 col-md-3">
                 <h3>This Month's Promotions</h3>
@@ -183,7 +288,9 @@
                 </div>
             </div>
         </div>
+        
         <!-- div 3-->
+        
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 col-md-3">
                 <h3>Meet our Culinary Specialists</h3>
@@ -204,81 +311,8 @@
                 </div>
             </div>
         </div>
-        <!-- Card / Form -->
            
-            <div class="row row-content align-items-center col-8 col-xm-12">
-                <div class="card">
-                  <div class="card-header bg-warning text-white">
-                      <h3 id="form"> Reserve a Table </h3>
-                  </div>
-                  <div class="card-body">
-                      
-                       <form>
-                    <div class="form-group row">
-                        <label for="guestnum" class="col-12 col-md-2 col-form-label">Number of Guests: </label>
-                        <div class="col-12 col-md-8">
-                            <div class="form-check-inline">
-                              <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optradio1"> 1
-                              </label>
-                            </div>
-                            <div class="form-check-inline">
-                              <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optradio2"> 2
-                              </label>
-                            </div>
-                            <div class="form-check-inline">
-                              <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optradio3"> 3
-                              </label>
-                            </div>
-                            <div class="form-check-inline">
-                              <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optradio4"> 4
-                              </label>
-                            </div>
-                            <div class="form-check-inline">
-                              <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optradio5"> 5
-                              </label>
-                            </div>
-                            <div class="form-check-inline">
-                              <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optradio6"> 6
-                              </label>
-                            </div>
-                        </div>
-                        <div class="col-0 col-md-2">
-                            <!-- 
-                            <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Tel. number">
-                            -->
-                        </div>
-                    </div>
-                
-                   <div class="form-group row">
-                        
-                        <label for="telnum" class="col-12 col-md-2 col-form-label">Date and Time: </label>
-                        
-                        <div class="col-12 col-md-3 mb-2">
-                            <input type="text" class="form-control" id="datebox" name="datebox" placeholder="Date">
-                        </div>
-                        
-                        <div class="col-12 col-md-3 mb-2">
-                           <input type="text" class="form-control" id="timebox" name="timebox" placeholder="Time"> 
-                        </div>
-                       
-                       </div>
-                    
-                    <div class="form-group row">
-                        <div class="offset-md-2 col-md-10">
-                            <button type="submit" class="btn btn-primary mb-2">Reserve</button>
-                        </div>
-                </div>
-            </form>
-
-                  </div>
-                </div>
-        </div>
+            
     </div>
     <!-- footer -->
     <footer class="footer">
@@ -332,11 +366,21 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
+    
+     <script>
         $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
+            $("#mycarousel").carousel( { interval: 1000 } );
+            
+            $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            });
+            
+            $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            });
         });
     </script>
+    
 </body>
 
 </html>

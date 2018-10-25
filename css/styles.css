@@ -1,3 +1,4 @@
+/* class */
 .row-header{
     margin:0px auto;
     padding:0px;
@@ -23,6 +24,7 @@
     color:floralwhite;
 }
 
+/* tag */
 address{
     font-size:80%;
     margin:0px;
@@ -58,4 +60,12 @@ body{
     top: 0;
     left: 0;
     min-height: 300px;
+}
+
+/* id selector */
+
+#carouselButton {
+    right:0px;
+    position: absolute;
+    bottom: 0px;
 }
