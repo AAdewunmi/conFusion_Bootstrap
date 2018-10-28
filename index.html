@@ -32,8 +32,7 @@
                     </ul> 
                     <!-- log in button -->
                     <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
-                    <span class="fa fa-sign-in"></span> Login</a>
+                    <a id="trigger1"> <span class="fa fa-sign-in"></span> Login</a>
                     </span>
             </div>
         </div>
@@ -46,7 +45,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login </h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button id="modalButton" type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -82,7 +81,7 @@
         <div class="modal-content">
           <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel"><b>Reserve a Table</b></h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button id="modalButton" type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
@@ -182,7 +181,9 @@
                 </div>
                 <!-- div 2 -->
                     <div class="col-12 col-sm-3 align-self-center"><img src="img/logo.png" class="img-fluid"></div>
-                <div class="col-12 col-sm-3 align-self-center"><button type="bottom" class="btn btn block btn-warning btn-sm" data-toggle="modal" data-target="#ReserveTableModal" href="#form">Reserve Table</button></div>  
+                    <!-- Reserve Table button -->
+                <div class="col-12 col-sm-3 align-self-center"><button type="bottom" class="btn btn block btn-warning btn-sm" 
+                id="trigger2" href="#form">Reserve Table</button></div>  
                 </div>
         </div>
     </header>
@@ -382,8 +383,20 @@
                 
             });
             
+            $("#trigger1").click(function(){
+                
+                $('#loginModal').modal('show');
+                
+            });
             
+            $("#trigger2").click(function(){
+                
+                $('#ReserveTableModal').modal('show');
+                
+            });
         });
+         
+        
     </script>
     
 </body>
